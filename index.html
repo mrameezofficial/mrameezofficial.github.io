@@ -1,9 +1,138 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smart Career Navigator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
 <body>
-  <h1>Muhammad Rameez</h1>
-  <p>Welcome to Webstackes!</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
-</body>
 
+  <!-- ========= NAV ========= -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <div class="logo">Smart<span>Career</span></div>
+      <nav class="nav__links">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How it Works</a>
+        <a href="#form">Get Started</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========= HERO ========= -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <h1>AI-Powered <span>Career Navigator</span></h1>
+        <p>Discover the right career path, get a personalized learning roadmap, and receive role-matched jobs—all powered by AI & automation.</p>
+        <a href="#form" class="btn btn-primary">Start Free</a>
+      </div>
+      <div class="hero__art">
+        <div class="glass-card">
+          <img src="./Images/day-office-travel-agency.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="hero__bg-gradient"></div>
+    <div class="hero__blur hero__blur--1"></div>
+    <div class="hero__blur hero__blur--2"></div>
+  </section>
+
+  <!-- ========= FEATURES ========= -->
+  <section id="features" class="features">
+    <div class="container">
+      <h2 class="section-title">Why You’ll Love It</h2>
+      <div class="grid features__grid">
+        <div class="card">
+          <h3>AI Career Match</h3>
+          <p>Get the most relevant career options using NLP and ML.</p>
+        </div>
+        <div class="card">
+          <h3>Resume Analyzer</h3>
+          <p>Upload your resume and receive instant improvement tips.</p>
+        </div>
+        <div class="card">
+          <h3>Learning Roadmap</h3>
+          <p>Auto-generated, step-by-step skill plan curated for you.</p>
+        </div>
+        <div class="card">
+          <h3>Job Matching</h3>
+          <p>(Optional) Integrate job APIs to find roles that fit you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= HOW IT WORKS ========= -->
+  <section id="how-it-works" class="how">
+    <div class="container">
+      <h2 class="section-title">How It Works</h2>
+      <ol class="how__steps">
+        <li>Fill the form with your education, skills, and goals. (Upload your resume, too!)</li>
+        <li>AI analyzes your profile and gives the best career recommendations.</li>
+        <li>Get a learning roadmap and (optionally) job suggestions via automation.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ========= FORM ========= -->
+  <section id="form" class="form-section">
+    <div class="container">
+      <h2 class="section-title">Get Your Personalized Career Plan</h2>
+      <form class="form">
+        <div class="form__group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="e.g. Muhammad Rameez" required>
+        </div>
+
+        <div class="form__group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="you@example.com" required>
+        </div>
+
+        <div class="form__group">
+          <label for="education">Education / Current Program</label>
+          <input type="text" id="education" placeholder="e.g. BSCS, Aptech Diploma, Intermediate, etc.">
+        </div>
+
+        <div class="form__group">
+          <label for="skills">Your Current Skills</label>
+          <textarea id="skills" rows="3" placeholder="e.g. HTML, CSS, JavaScript, Python, WordPress..."></textarea>
+        </div>
+
+        <div class="form__group">
+          <label for="interests">Your Interests / Fields</label>
+          <textarea id="interests" rows="3" placeholder="e.g. AI, Web Development, Data Science, Cybersecurity"></textarea>
+        </div>
+
+        <div class="form__group">
+          <label for="goals">Your Goals</label>
+          <textarea id="goals" rows="3" placeholder="e.g. Become a backend engineer in 1 year, get internship, etc. "></textarea>
+        </div>
+
+        <div class="form__group">
+          <label for="resume">Upload Resume (PDF/DOCX)</label>
+          <input type="file" id="resume" accept=".pdf,.doc,.docx">
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full">Submit Now</button>
+        <p class="form__note">*This is a prototype – AI & automations can be plugged in next.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========= FOOTER ========= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> Smart Career Navigator — Built for Aptech Vision</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
